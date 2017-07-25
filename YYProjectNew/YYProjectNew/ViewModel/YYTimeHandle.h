@@ -10,12 +10,6 @@
 
 @interface YYTimeHandle : NSObject
 
-
-/**
- 单例方法
-
- @return 单例对象
- */
 + (instancetype)sharedManager;
 
 

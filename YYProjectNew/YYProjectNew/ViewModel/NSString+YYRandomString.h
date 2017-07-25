@@ -10,6 +10,12 @@
 
 @interface NSString (YYRandomString)
 
+/**
+ 根据bitInt输入的数字返回指定位数16进字符串。
+ 
+ @param bitInt 指定位数
+ @return 指定位数16进字符串
+ */
 + (NSString *)returnRandomStringWithBitInt:(NSInteger)bitInt;
 
 @end
