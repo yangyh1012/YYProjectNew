@@ -46,36 +46,6 @@
  */
 - (NSString *)onlineRequestVersion;
 
-
-/**
- 测试公钥
-
- @return 测试公钥
- */
-- (NSString *)offlinePublicKey;
-
-/**
- 正式公钥
-
- @return 正式公钥
- */
-- (NSString *)onlinePublicKey;
-
-
-/**
- 测试私钥
-
- @return 测试私钥
- */
-- (NSString *)offlinePrivateKey;
-
-/**
- 正式私钥
-
- @return 正式私钥
- */
-- (NSString *)onlinePrivateKey;
-
 /**
  生成完整的url，一般是url+版本号+方法名
 
@@ -94,7 +64,7 @@
 - (BOOL)isOnlineByChild;//ByChild表示实现此方法，会覆盖父类ByParent方法
 
 /**
- 增加额外参数，服务层级别的参数
+ 增加共同参数，服务层级别的参数
 
  @return 额外参数dic
  */

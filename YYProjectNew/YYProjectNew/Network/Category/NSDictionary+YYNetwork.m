@@ -11,14 +11,14 @@
 
 @implementation NSDictionary (YYNetwork)
 
-- (NSString *)network_urlParamsStringEscape:(BOOL)shouldEscape {
+- (NSString *)network_urlParamsStringShouldSignature:(BOOL)shouldSignature {
     
-    NSArray *sortedArray = [self network_urlParamsArrayEscape:shouldEscape];
+    NSArray *sortedArray = [self network_urlParamsArrayShouldSignature:shouldSignature];
     
     return [sortedArray network_jsonString];
 }
 
-- (NSArray *)network_urlParamsArrayEscape:(BOOL)shouldEscape {
+- (NSArray *)network_urlParamsArrayShouldSignature:(BOOL)shouldSignature {
     
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
@@ -29,7 +29,7 @@
             obj = [NSString stringWithFormat:@"%@", obj];
         }
         
-        if (!shouldEscape) {
+        if (!shouldSignature) {
             
             obj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,  (CFStringRef)obj,  NULL,  (CFStringRef)@"!*'();:@&;=+$,/?%#[]",  kCFStringEncodingUTF8));
         }

@@ -14,19 +14,19 @@
 /**
  将url参数转字符串
 
- @param shouldEscape 是否需要转义
+ @param shouldSignature 是否需要签名，不签名的话，会进行转义
  @return 字符串
  */
-- (NSString *)network_urlParamsStringEscape:(BOOL)shouldEscape;
+- (NSString *)network_urlParamsStringShouldSignature:(BOOL)shouldSignature;
 
 
 /**
  将url参数转数组
 
- @param shouldEscape 是否需要转义
+ @param shouldSignature 是否需要签名，会进行转义
  @return 数组
  */
-- (NSArray *)network_urlParamsArrayEscape:(BOOL)shouldEscape;
+- (NSArray *)network_urlParamsArrayShouldSignature:(BOOL)shouldSignature;
 
 
 /**

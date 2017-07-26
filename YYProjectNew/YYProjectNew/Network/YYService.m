@@ -54,16 +54,6 @@
 
 #pragma mark - getters and setters
 
-- (NSString *)privateKey {
-    
-    return [self isOnlineByParent] ? self.child.onlinePrivateKey : self.child.offlinePrivateKey;
-}
-
-- (NSString *)publicKey {
-    
-    return [self isOnlineByParent] ? self.child.onlinePublicKey : self.child.offlinePublicKey;
-}
-
 - (NSString *)requestBaseUrl {
     
     return [self isOnlineByParent] ? self.child.onlineRequestBaseUrl : self.child.offlineRequestBaseUrl;

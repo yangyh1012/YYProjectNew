@@ -95,7 +95,7 @@
 
 - (NSString *)keyWithServiceIdentifier:(NSString *)serviceIdentifier methodName:(NSString *)methodName requestParams:(NSDictionary *)requestParams {
     
-    return [NSString stringWithFormat:@"%@%@%@", serviceIdentifier, methodName, [requestParams network_urlParamsStringEscape:NO]];
+    return [NSString stringWithFormat:@"%@%@%@", serviceIdentifier, methodName, [requestParams network_urlParamsStringShouldSignature:NO]];
 }
 
 #pragma mark - getters and setters

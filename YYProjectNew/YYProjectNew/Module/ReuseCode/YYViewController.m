@@ -8,7 +8,6 @@
 
 #import "YYViewController.h"
 #import "NSObject+YYSharedInstance.h"
-//#import "YYNetwork.h"
 #import "YYTestManager.h"
 
 @interface YYViewController ()<UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,YYBaseRequestManagerCallBackDelegate,YYBaseRequestManagerParamSource>

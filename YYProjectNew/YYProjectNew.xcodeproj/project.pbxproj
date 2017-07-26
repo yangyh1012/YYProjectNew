@@ -261,14 +261,14 @@
 		A04463BF1F2742F500027423 /* ReuseCode */ = {
 			isa = PBXGroup;
 			children = (
-				A04463C01F2742F500027423 /* YYCollectionViewCell.h */,
-				A04463C11F2742F500027423 /* YYCollectionViewCell.m */,
+				A04463C61F2742F500027423 /* YYViewController.h */,
+				A04463C71F2742F500027423 /* YYViewController.m */,
 				A04463C21F2742F500027423 /* YYSecondViewController.h */,
 				A04463C31F2742F500027423 /* YYSecondViewController.m */,
 				A04463C41F2742F500027423 /* YYTableViewCell.h */,
 				A04463C51F2742F500027423 /* YYTableViewCell.m */,
-				A04463C61F2742F500027423 /* YYViewController.h */,
-				A04463C71F2742F500027423 /* YYViewController.m */,
+				A04463C01F2742F500027423 /* YYCollectionViewCell.h */,
+				A04463C11F2742F500027423 /* YYCollectionViewCell.m */,
 			);
 			path = ReuseCode;
 			sourceTree = "<group>";
