@@ -30,26 +30,6 @@
     return @"";
 }
 
-- (NSString *)offlinePublicKey {
-    
-    return @"";
-}
-
-- (NSString *)onlinePublicKey {
-    
-    return @"";
-}
-
-- (NSString *)offlinePrivateKey {
-    
-    return @"";
-}
-
-- (NSString *)onlinePrivateKey {
-    
-    return @"";
-}
-
 - (NSString *)fullUrlByMethodName:(NSString *)methodName {
     
     NSString *urlString = nil;

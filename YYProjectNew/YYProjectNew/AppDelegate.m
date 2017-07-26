@@ -28,12 +28,14 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     DLog(@"%@",paths);
     
-    
     [YYServiceFactory sharedInstance].dataSource = self;
     
-    
-    
     return YES;
+}
+
+- (NSDictionary<NSString *,NSString *> *)serviceInfos {
+    
+    return @{YYTestServiceV1:@"YYTestService"};
 }
 
 
@@ -63,10 +65,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (NSDictionary<NSString *,NSString *> *)serviceInfos {
-    
-    return @{YYTestServiceV1:@"YYTestService"};
-}
+
 
 
 

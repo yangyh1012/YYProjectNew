@@ -7,7 +7,7 @@
 //
 
 #import "YYDataConfigBusiness.h"
-#import "YYViewController.h"
+#import "YYReuseCodeViewController.h"
 
 @implementation YYDataConfigBusiness
 

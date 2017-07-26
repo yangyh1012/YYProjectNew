@@ -15,7 +15,7 @@
 		A04463C91F2742F500027423 /* YYTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463BC1F2742F500027423 /* YYTestManager.m */; };
 		A04463CA1F2742F500027423 /* YYTestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463BE1F2742F500027423 /* YYTestService.m */; };
 		A04463CB1F2742F500027423 /* YYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463C11F2742F500027423 /* YYCollectionViewCell.m */; };
-		A04463CC1F2742F500027423 /* YYSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463C31F2742F500027423 /* YYSecondViewController.m */; };
+		A04463CC1F2742F500027423 /* YYReuseCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463C31F2742F500027423 /* YYReuseCodeViewController.m */; };
 		A04463CD1F2742F500027423 /* YYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463C51F2742F500027423 /* YYTableViewCell.m */; };
 		A04463CE1F2742F500027423 /* YYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463C71F2742F500027423 /* YYViewController.m */; };
 		A04463F01F2744F800027423 /* NSArray+YYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463D21F2744F800027423 /* NSArray+YYNetwork.m */; };
@@ -47,6 +47,7 @@
 		A04464311F274B3B00027423 /* NSString+YYEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464291F274B3B00027423 /* NSString+YYEmpty.m */; };
 		A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */ = {isa = PBXBuildFile; fileRef = A044642C1F274B3B00027423 /* AppDelegate+YYLoadSomething.m */; };
 		A04464331F274B3B00027423 /* UIButton+YYAddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A044642E1F274B3B00027423 /* UIButton+YYAddProperty.m */; };
+		A04464391F2879BE00027423 /* YYRequestTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464381F2879BE00027423 /* YYRequestTestViewController.m */; };
 		A0D513C51F1CB5A300B1BB56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D513C41F1CB5A300B1BB56 /* main.m */; };
 		A0D513C81F1CB5A300B1BB56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D513C71F1CB5A300B1BB56 /* AppDelegate.m */; };
 		A0D513CE1F1CB5A300B1BB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D513CC1F1CB5A300B1BB56 /* Main.storyboard */; };
@@ -94,12 +95,12 @@
 		A04463BE1F2742F500027423 /* YYTestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTestService.m; sourceTree = "<group>"; };
 		A04463C01F2742F500027423 /* YYCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCollectionViewCell.h; sourceTree = "<group>"; };
 		A04463C11F2742F500027423 /* YYCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCollectionViewCell.m; sourceTree = "<group>"; };
-		A04463C21F2742F500027423 /* YYSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSecondViewController.h; sourceTree = "<group>"; };
-		A04463C31F2742F500027423 /* YYSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSecondViewController.m; sourceTree = "<group>"; };
+		A04463C21F2742F500027423 /* YYReuseCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYReuseCodeViewController.h; sourceTree = "<group>"; };
+		A04463C31F2742F500027423 /* YYReuseCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYReuseCodeViewController.m; sourceTree = "<group>"; };
 		A04463C41F2742F500027423 /* YYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTableViewCell.h; sourceTree = "<group>"; };
 		A04463C51F2742F500027423 /* YYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTableViewCell.m; sourceTree = "<group>"; };
-		A04463C61F2742F500027423 /* YYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYViewController.h; sourceTree = "<group>"; };
-		A04463C71F2742F500027423 /* YYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYViewController.m; sourceTree = "<group>"; };
+		A04463C61F2742F500027423 /* YYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYViewController.h; path = Module/ReuseCode/YYViewController.h; sourceTree = "<group>"; };
+		A04463C71F2742F500027423 /* YYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYViewController.m; path = Module/ReuseCode/YYViewController.m; sourceTree = "<group>"; };
 		A04463D11F2744F800027423 /* NSArray+YYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYNetwork.h"; sourceTree = "<group>"; };
 		A04463D21F2744F800027423 /* NSArray+YYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YYNetwork.m"; sourceTree = "<group>"; };
 		A04463D31F2744F800027423 /* NSDictionary+YYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YYNetwork.h"; sourceTree = "<group>"; };
@@ -161,6 +162,8 @@
 		A044642C1F274B3B00027423 /* AppDelegate+YYLoadSomething.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+YYLoadSomething.m"; sourceTree = "<group>"; };
 		A044642D1F274B3B00027423 /* UIButton+YYAddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYAddProperty.h"; sourceTree = "<group>"; };
 		A044642E1F274B3B00027423 /* UIButton+YYAddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYAddProperty.m"; sourceTree = "<group>"; };
+		A04464371F2879BE00027423 /* YYRequestTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRequestTestViewController.h; sourceTree = "<group>"; };
+		A04464381F2879BE00027423 /* YYRequestTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRequestTestViewController.m; sourceTree = "<group>"; };
 		A0D513C01F1CB5A300B1BB56 /* YYProjectNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProjectNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D513C41F1CB5A300B1BB56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0D513C61F1CB5A300B1BB56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -239,8 +242,8 @@
 		A04463B71F2742F500027423 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A04463B81F2742F500027423 /* NetDemo */,
 				A04463BF1F2742F500027423 /* ReuseCode */,
+				A04463B81F2742F500027423 /* NetDemo */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -248,12 +251,11 @@
 		A04463B81F2742F500027423 /* NetDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A04463B91F2742F500027423 /* YYRequestConst.h */,
-				A04463BA1F2742F500027423 /* YYRequestConst.m */,
+				A044643A1F28874D00027423 /* service */,
+				A04464371F2879BE00027423 /* YYRequestTestViewController.h */,
+				A04464381F2879BE00027423 /* YYRequestTestViewController.m */,
 				A04463BB1F2742F500027423 /* YYTestManager.h */,
 				A04463BC1F2742F500027423 /* YYTestManager.m */,
-				A04463BD1F2742F500027423 /* YYTestService.h */,
-				A04463BE1F2742F500027423 /* YYTestService.m */,
 			);
 			path = NetDemo;
 			sourceTree = "<group>";
@@ -261,10 +263,8 @@
 		A04463BF1F2742F500027423 /* ReuseCode */ = {
 			isa = PBXGroup;
 			children = (
-				A04463C61F2742F500027423 /* YYViewController.h */,
-				A04463C71F2742F500027423 /* YYViewController.m */,
-				A04463C21F2742F500027423 /* YYSecondViewController.h */,
-				A04463C31F2742F500027423 /* YYSecondViewController.m */,
+				A04463C21F2742F500027423 /* YYReuseCodeViewController.h */,
+				A04463C31F2742F500027423 /* YYReuseCodeViewController.m */,
 				A04463C41F2742F500027423 /* YYTableViewCell.h */,
 				A04463C51F2742F500027423 /* YYTableViewCell.m */,
 				A04463C01F2742F500027423 /* YYCollectionViewCell.h */,
@@ -393,6 +393,17 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		A044643A1F28874D00027423 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A04463B91F2742F500027423 /* YYRequestConst.h */,
+				A04463BA1F2742F500027423 /* YYRequestConst.m */,
+				A04463BD1F2742F500027423 /* YYTestService.h */,
+				A04463BE1F2742F500027423 /* YYTestService.m */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
 		A0D513B71F1CB5A300B1BB56 = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +438,8 @@
 				A04463AA1F2741D600027423 /* Business */,
 				A0D513C61F1CB5A300B1BB56 /* AppDelegate.h */,
 				A0D513C71F1CB5A300B1BB56 /* AppDelegate.m */,
+				A04463C61F2742F500027423 /* YYViewController.h */,
+				A04463C71F2742F500027423 /* YYViewController.m */,
 				A0D513CC1F1CB5A300B1BB56 /* Main.storyboard */,
 				A0D513CF1F1CB5A300B1BB56 /* Assets.xcassets */,
 				A0D513D11F1CB5A400B1BB56 /* LaunchScreen.storyboard */,
@@ -654,6 +667,7 @@
 				A04463B31F2741D600027423 /* YYAnalyticsBusiness.m in Sources */,
 				A04464331F274B3B00027423 /* UIButton+YYAddProperty.m in Sources */,
 				A04464311F274B3B00027423 /* NSString+YYEmpty.m in Sources */,
+				A04464391F2879BE00027423 /* YYRequestTestViewController.m in Sources */,
 				A04464101F2745B100027423 /* NSString+YYBase64.m in Sources */,
 				A04463F81F2744F800027423 /* YYRequestCache.m in Sources */,
 				A04463C81F2742F500027423 /* YYRequestConst.m in Sources */,
@@ -671,7 +685,7 @@
 				A044640F1F2745B100027423 /* NSString+YYAES128.m in Sources */,
 				A044641E1F2749F900027423 /* YYTimeHandle.m in Sources */,
 				A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */,
-				A04463CC1F2742F500027423 /* YYSecondViewController.m in Sources */,
+				A04463CC1F2742F500027423 /* YYReuseCodeViewController.m in Sources */,
 				A04464111F2745B100027423 /* NSString+YYDES.m in Sources */,
 				A044642F1F274B3B00027423 /* NSObject+YYSharedInstance.m in Sources */,
 				A04464131F2745B100027423 /* NSString+YYSHA1.m in Sources */,
