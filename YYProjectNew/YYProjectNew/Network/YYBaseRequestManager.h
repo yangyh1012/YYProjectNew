@@ -216,12 +216,12 @@ static NSString * const YYBaseRequestManagerRequestId = @"YYBaseRequestManagerRe
 - (BOOL)shouldLoadFromNative;//表示父类没有此方法
 
 /**
- 是否增加额外参数，比如增加pageNumber和pageSize，具体业务层方面的参数，该方法在拦截器和校验器之前调用
+ 是否增加额外参数，比如增加pageNumber和pageSize，或者调整参数，具体业务层方面的参数，该方法在拦截器和校验器之前调用
 
  @param params 已有参数
  @return 更完整的参数
  */
-- (NSDictionary *)addExtraParams:(NSDictionary *)params;//表示父类没有此方法
+- (NSDictionary *)addExtraOrRemakeParams:(NSDictionary *)params;//表示父类没有此方法
 
 
 /**

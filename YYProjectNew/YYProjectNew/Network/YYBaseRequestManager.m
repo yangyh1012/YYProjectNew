@@ -123,9 +123,9 @@
     
     NSDictionary *requestParams = nil;
     //发起请求之前子类是否需要添加额外参数，比如pageNumber或者pageSize
-    if ([self.child respondsToSelector:@selector(addExtraParams:)]) {
+    if ([self.child respondsToSelector:@selector(addExtraOrRemakeParams:)]) {
         
-        requestParams = [self.child addExtraParams:params];
+        requestParams = [self.child addExtraOrRemakeParams:params];
     }
     
     if (requestParams == nil) {
@@ -133,7 +133,7 @@
         requestParams = params;
     }
     
-    //是否在请求前处理参数，比如加载动画
+    //是否在请求前观察参数
     if ([self beforeRequestWithParams:requestParams]) {
         
         //是否验证参数，验证参数的格式
