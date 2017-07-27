@@ -244,6 +244,7 @@
 			children = (
 				A04463BF1F2742F500027423 /* ReuseCode */,
 				A04463B81F2742F500027423 /* NetDemo */,
+				A044643F1F298A7900027423 /* EncryptDemo */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -402,6 +403,13 @@
 				A04463BE1F2742F500027423 /* YYTestService.m */,
 			);
 			name = service;
+			sourceTree = "<group>";
+		};
+		A044643F1F298A7900027423 /* EncryptDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EncryptDemo;
 			sourceTree = "<group>";
 		};
 		A0D513B71F1CB5A300B1BB56 = {
