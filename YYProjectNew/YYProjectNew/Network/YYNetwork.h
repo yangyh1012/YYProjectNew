@@ -11,5 +11,6 @@
 
 #import "YYBaseRequestManager.h"
 #import "YYServiceFactory.h"
+#import "NSDictionary+YYNetwork.h"
 
 #endif /* YYNetwork_h */

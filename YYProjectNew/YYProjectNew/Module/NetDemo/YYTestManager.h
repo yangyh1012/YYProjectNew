@@ -6,7 +6,7 @@
 //  Copyright © 2017年 yangyh. All rights reserved.
 //
 
-#import "YYBaseRequestManager.h"
+#import "YYNetwork.h"
 
 @interface YYTestManager : YYBaseRequestManager<YYBaseRequestManagerProtocol>
 

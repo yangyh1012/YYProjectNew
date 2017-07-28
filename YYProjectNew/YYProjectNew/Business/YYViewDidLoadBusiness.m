@@ -18,6 +18,8 @@
 //        return ;
 //    }
     
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [[leftButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {

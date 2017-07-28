@@ -6,7 +6,7 @@
 //  Copyright © 2017年 yangyh. All rights reserved.
 //
 
-#import "YYService.h"
+#import "YYNetwork.h"
 
 @interface YYTestService : YYService<YYServiceProtocol>
 
