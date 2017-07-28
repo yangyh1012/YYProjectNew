@@ -28,6 +28,4 @@
 - (NSString *)rsaDecryptString:(NSString *)string;
 - (NSData *)rsaDecryptData:(NSData *)data;
 
-- (BOOL)rsaSHA1VerifyData:(NSData *)plainData withSignature:(NSData *)signature;
-
 @end

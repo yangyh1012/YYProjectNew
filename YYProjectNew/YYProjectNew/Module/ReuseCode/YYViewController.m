@@ -49,7 +49,8 @@
        
         @strongify(self);
 //        id requestController = [[NSClassFromString(@"YYReuseCodeViewController") alloc] init];
-        id requestController = [[NSClassFromString(@"YYRequestTestViewController") alloc] init];
+//        id requestController = [[NSClassFromString(@"YYRequestTestViewController") alloc] init];
+        id requestController = [[NSClassFromString(@"YYEncryptTestViewController") alloc] init];
         [self.navigationController pushViewController:requestController animated:YES];
     }];
 }

@@ -27,9 +27,9 @@
     CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt,//加密
                                           kCCAlgorithmAES128,//加密方式AES128
                                           kCCOptionPKCS7Padding|kCCOptionECBMode,//加密模式ECB、补码方式PKCS7Padding
-                                          keyPtr,//秘钥
+                                          keyPtr,//密钥
                                           kCCBlockSizeAES128,
-                                          NULL,//秘钥偏移量
+                                          NULL,//密钥偏移量
                                           [data bytes],
                                           dataLength,
                                           buffer,

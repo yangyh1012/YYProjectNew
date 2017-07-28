@@ -31,9 +31,9 @@ static NSDictionary *s_tokenAddition = nil;
     CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt,//算法类型：加密
                                           kCCAlgorithmDES,//算法名称
                                           kCCOptionPKCS7Padding,//补码方式
-                                          [key UTF8String],//秘钥
+                                          [key UTF8String],//密钥
                                           kCCKeySizeDES,
-                                          NULL,//秘钥偏移量，可为NULL，也可为上面定义的变量iv
+                                          NULL,//密钥偏移量，可为NULL，也可为上面定义的变量iv
                                           bytes,
                                           length,
                                           buffer,

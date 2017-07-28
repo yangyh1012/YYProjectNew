@@ -200,27 +200,4 @@
     return decryptedData;
 }
 
-- (BOOL)rsaSHA1VerifyData:(NSData *)plainData withSignature:(NSData *)signature {
-    
-    size_t signedHashBytesSize = SecKeyGetBlockSize([self getPublicKey]);
-    const void *signedHashBytes = [signature bytes];
-    
-    size_t hashBytesSize = CC_SHA1_DIGEST_LENGTH;
-    uint8_t *hashBytes = malloc(hashBytesSize);
-    
-    if (!CC_SHA1([plainData bytes], (CC_LONG)[plainData length], hashBytes)) {
-        
-        return NO;
-    }
-    
-    OSStatus status = SecKeyRawVerify(publicKey,
-                                      kSecPaddingPKCS1SHA1,
-                                      hashBytes,
-                                      hashBytesSize,
-                                      signedHashBytes,
-                                      signedHashBytesSize);
-    
-    return status == errSecSuccess;
-}
-
 @end

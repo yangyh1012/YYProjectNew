@@ -48,6 +48,13 @@
 		A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */ = {isa = PBXBuildFile; fileRef = A044642C1F274B3B00027423 /* AppDelegate+YYLoadSomething.m */; };
 		A04464331F274B3B00027423 /* UIButton+YYAddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A044642E1F274B3B00027423 /* UIButton+YYAddProperty.m */; };
 		A04464391F2879BE00027423 /* YYRequestTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464381F2879BE00027423 /* YYRequestTestViewController.m */; };
+		A0BA62E41F2ADDEF0038940C /* NSString+YYSHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E31F2ADDEF0038940C /* NSString+YYSHA256.m */; };
+		A0BA62E71F2AE8360038940C /* NSString+YYAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E61F2AE8360038940C /* NSString+YYAES256.m */; };
+		A0BA62EA1F2AF02C0038940C /* YYEncryptTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E91F2AF02C0038940C /* YYEncryptTestViewController.m */; };
+		A0BA62F01F2AF9320038940C /* pkcs8_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = A0BA62EC1F2AF9320038940C /* pkcs8_private_key.pem */; };
+		A0BA62F11F2AF9320038940C /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = A0BA62ED1F2AF9320038940C /* private_key.p12 */; };
+		A0BA62F21F2AF9320038940C /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = A0BA62EE1F2AF9320038940C /* public_key.der */; };
+		A0BA62F31F2AF9320038940C /* rsa_public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = A0BA62EF1F2AF9320038940C /* rsa_public_key.pem */; };
 		A0D513C51F1CB5A300B1BB56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D513C41F1CB5A300B1BB56 /* main.m */; };
 		A0D513C81F1CB5A300B1BB56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D513C71F1CB5A300B1BB56 /* AppDelegate.m */; };
 		A0D513CE1F1CB5A300B1BB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D513CC1F1CB5A300B1BB56 /* Main.storyboard */; };
@@ -164,6 +171,16 @@
 		A044642E1F274B3B00027423 /* UIButton+YYAddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYAddProperty.m"; sourceTree = "<group>"; };
 		A04464371F2879BE00027423 /* YYRequestTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRequestTestViewController.h; sourceTree = "<group>"; };
 		A04464381F2879BE00027423 /* YYRequestTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRequestTestViewController.m; sourceTree = "<group>"; };
+		A0BA62E21F2ADDEF0038940C /* NSString+YYSHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYSHA256.h"; sourceTree = "<group>"; };
+		A0BA62E31F2ADDEF0038940C /* NSString+YYSHA256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYSHA256.m"; sourceTree = "<group>"; };
+		A0BA62E51F2AE8360038940C /* NSString+YYAES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAES256.h"; sourceTree = "<group>"; };
+		A0BA62E61F2AE8360038940C /* NSString+YYAES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAES256.m"; sourceTree = "<group>"; };
+		A0BA62E81F2AF02C0038940C /* YYEncryptTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYEncryptTestViewController.h; sourceTree = "<group>"; };
+		A0BA62E91F2AF02C0038940C /* YYEncryptTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYEncryptTestViewController.m; sourceTree = "<group>"; };
+		A0BA62EC1F2AF9320038940C /* pkcs8_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pkcs8_private_key.pem; sourceTree = "<group>"; };
+		A0BA62ED1F2AF9320038940C /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		A0BA62EE1F2AF9320038940C /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		A0BA62EF1F2AF9320038940C /* rsa_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_public_key.pem; sourceTree = "<group>"; };
 		A0D513C01F1CB5A300B1BB56 /* YYProjectNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYProjectNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D513C41F1CB5A300B1BB56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0D513C61F1CB5A300B1BB56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -329,14 +346,19 @@
 				A04464091F2745B100027423 /* NSString+YYMD5.m */,
 				A044640A1F2745B100027423 /* NSString+YYSHA1.h */,
 				A044640B1F2745B100027423 /* NSString+YYSHA1.m */,
+				A0BA62E21F2ADDEF0038940C /* NSString+YYSHA256.h */,
+				A0BA62E31F2ADDEF0038940C /* NSString+YYSHA256.m */,
 				A04464001F2745B100027423 /* NSString+MD5_Base64.h */,
 				A04464011F2745B100027423 /* NSString+MD5_Base64.m */,
 				A04464061F2745B100027423 /* NSString+YYDES.h */,
 				A04464071F2745B100027423 /* NSString+YYDES.m */,
 				A04464021F2745B100027423 /* NSString+YYAES128.h */,
 				A04464031F2745B100027423 /* NSString+YYAES128.m */,
+				A0BA62E51F2AE8360038940C /* NSString+YYAES256.h */,
+				A0BA62E61F2AE8360038940C /* NSString+YYAES256.m */,
 				A044640C1F2745B100027423 /* YYRSA.h */,
 				A044640D1F2745B100027423 /* YYRSA.m */,
+				A0BA62EB1F2AF9090038940C /* RSA_file */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -408,8 +430,21 @@
 		A044643F1F298A7900027423 /* EncryptDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0BA62E81F2AF02C0038940C /* YYEncryptTestViewController.h */,
+				A0BA62E91F2AF02C0038940C /* YYEncryptTestViewController.m */,
 			);
 			path = EncryptDemo;
+			sourceTree = "<group>";
+		};
+		A0BA62EB1F2AF9090038940C /* RSA_file */ = {
+			isa = PBXGroup;
+			children = (
+				A0BA62EE1F2AF9320038940C /* public_key.der */,
+				A0BA62ED1F2AF9320038940C /* private_key.p12 */,
+				A0BA62EF1F2AF9320038940C /* rsa_public_key.pem */,
+				A0BA62EC1F2AF9320038940C /* pkcs8_private_key.pem */,
+			);
+			name = RSA_file;
 			sourceTree = "<group>";
 		};
 		A0D513B71F1CB5A300B1BB56 = {
@@ -593,8 +628,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BA62F01F2AF9320038940C /* pkcs8_private_key.pem in Resources */,
 				A0D513D31F1CB5A400B1BB56 /* LaunchScreen.storyboard in Resources */,
+				A0BA62F21F2AF9320038940C /* public_key.der in Resources */,
 				A0D513D01F1CB5A300B1BB56 /* Assets.xcassets in Resources */,
+				A0BA62F11F2AF9320038940C /* private_key.p12 in Resources */,
+				A0BA62F31F2AF9320038940C /* rsa_public_key.pem in Resources */,
 				A0D513CE1F1CB5A300B1BB56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +723,7 @@
 				A04463FD1F2744F800027423 /* YYService.m in Sources */,
 				A04463B41F2741D600027423 /* YYBussinessConstants.m in Sources */,
 				A04463FC1F2744F800027423 /* YYResponse.m in Sources */,
+				A0BA62E71F2AE8360038940C /* NSString+YYAES256.m in Sources */,
 				A04463F01F2744F800027423 /* NSArray+YYNetwork.m in Sources */,
 				A04463F21F2744F800027423 /* NSObject+YYNetwork.m in Sources */,
 				A04463F31F2744F800027423 /* NSString+YYNetwork.m in Sources */,
@@ -692,6 +732,7 @@
 				A0D513C51F1CB5A300B1BB56 /* main.m in Sources */,
 				A044640F1F2745B100027423 /* NSString+YYAES128.m in Sources */,
 				A044641E1F2749F900027423 /* YYTimeHandle.m in Sources */,
+				A0BA62E41F2ADDEF0038940C /* NSString+YYSHA256.m in Sources */,
 				A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */,
 				A04463CC1F2742F500027423 /* YYReuseCodeViewController.m in Sources */,
 				A04464111F2745B100027423 /* NSString+YYDES.m in Sources */,
@@ -710,6 +751,7 @@
 				A04463CA1F2742F500027423 /* YYTestService.m in Sources */,
 				A04463F91F2744F800027423 /* YYRequestCacheObject.m in Sources */,
 				A04463B51F2741D600027423 /* YYDataConfigBusiness.m in Sources */,
+				A0BA62EA1F2AF02C0038940C /* YYEncryptTestViewController.m in Sources */,
 				A04463C91F2742F500027423 /* YYTestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
