@@ -48,9 +48,9 @@
     [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
        
         @strongify(self);
-//        id requestController = [[NSClassFromString(@"YYReuseCodeViewController") alloc] init];
+        id requestController = [[NSClassFromString(@"YYReuseCodeViewController") alloc] init];
 //        id requestController = [[NSClassFromString(@"YYRequestTestViewController") alloc] init];
-        id requestController = [[NSClassFromString(@"YYEncryptTestViewController") alloc] init];
+//        id requestController = [[NSClassFromString(@"YYEncryptTestViewController") alloc] init];
         [self.navigationController pushViewController:requestController animated:YES];
     }];
 }

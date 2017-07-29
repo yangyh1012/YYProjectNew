@@ -42,7 +42,6 @@
 		A04464141F2745B100027423 /* YYRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A044640D1F2745B100027423 /* YYRSA.m */; };
 		A044641D1F2749F900027423 /* NSString+YYRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464191F2749F900027423 /* NSString+YYRandomString.m */; };
 		A044641E1F2749F900027423 /* YYTimeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A044641B1F2749F900027423 /* YYTimeHandle.m */; };
-		A044642F1F274B3B00027423 /* NSObject+YYSharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464251F274B3B00027423 /* NSObject+YYSharedInstance.m */; };
 		A04464301F274B3B00027423 /* NSString+YYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464271F274B3B00027423 /* NSString+YYDevice.m */; };
 		A04464311F274B3B00027423 /* NSString+YYEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = A04464291F274B3B00027423 /* NSString+YYEmpty.m */; };
 		A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */ = {isa = PBXBuildFile; fileRef = A044642C1F274B3B00027423 /* AppDelegate+YYLoadSomething.m */; };
@@ -159,8 +158,6 @@
 		A044641B1F2749F900027423 /* YYTimeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTimeHandle.m; sourceTree = "<group>"; };
 		A04464201F274AB300027423 /* YYDataConfigProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDataConfigProtocol.h; sourceTree = "<group>"; };
 		A04464211F274AB300027423 /* YYLifeCycleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLifeCycleProtocol.h; sourceTree = "<group>"; };
-		A04464241F274B3B00027423 /* NSObject+YYSharedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYSharedInstance.h"; sourceTree = "<group>"; };
-		A04464251F274B3B00027423 /* NSObject+YYSharedInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYSharedInstance.m"; sourceTree = "<group>"; };
 		A04464261F274B3B00027423 /* NSString+YYDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYDevice.h"; sourceTree = "<group>"; };
 		A04464271F274B3B00027423 /* NSString+YYDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYDevice.m"; sourceTree = "<group>"; };
 		A04464281F274B3B00027423 /* NSString+YYEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYEmpty.h"; sourceTree = "<group>"; };
@@ -395,8 +392,6 @@
 		A04464231F274B3B00027423 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A04464241F274B3B00027423 /* NSObject+YYSharedInstance.h */,
-				A04464251F274B3B00027423 /* NSObject+YYSharedInstance.m */,
 				A04464281F274B3B00027423 /* NSString+YYEmpty.h */,
 				A04464291F274B3B00027423 /* NSString+YYEmpty.m */,
 				A04464261F274B3B00027423 /* NSString+YYDevice.h */,
@@ -736,7 +731,6 @@
 				A04464321F274B3B00027423 /* AppDelegate+YYLoadSomething.m in Sources */,
 				A04463CC1F2742F500027423 /* YYReuseCodeViewController.m in Sources */,
 				A04464111F2745B100027423 /* NSString+YYDES.m in Sources */,
-				A044642F1F274B3B00027423 /* NSObject+YYSharedInstance.m in Sources */,
 				A04464131F2745B100027423 /* NSString+YYSHA1.m in Sources */,
 				A04463F71F2744F800027423 /* YYRequest.m in Sources */,
 				A04464301F274B3B00027423 /* NSString+YYDevice.m in Sources */,
@@ -906,6 +900,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YYProjectNew/PrefixHeader.h;
 				INFOPLIST_FILE = YYProjectNew/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -924,6 +920,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YYProjectNew/PrefixHeader.h;
 				INFOPLIST_FILE = YYProjectNew/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -7,7 +7,7 @@
 //
 
 #import "YYReuseCodeViewController.h"
-#import "NSObject+YYSharedInstance.h"
+#import <objc/message.h>
 
 @interface YYReuseCodeViewController ()<UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 ///<UITableViewDataSource,UITableViewDelegate>
@@ -41,7 +41,7 @@
     BOOL flag = NO;
     
     if (flag) {
-        
+    
         [self.view addSubview:self.tableView];
         [self.view addSubview:self.collectionView];
         
@@ -126,6 +126,13 @@
     static NSString *CellIdentifier = @"CellIdentifier";
     YYAnotherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+//    YYAnotherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (!cell) {
+//        
+//        cell = [[YYAnotherTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+//                                      reuseIdentifier:CellIdentifier];
+//    }
+    
     //设置单元格不可点击
     //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -136,7 +143,7 @@
     DLog(@"row:%@",@(row));
     DLog(@"section:%@",@(section));
     
-    id<YYDataConfigProtocol> service = [NSClassFromString(DataConfigBusiness) sharedInstance];
+    id<YYDataConfigProtocol> service = objc_msgSend(NSClassFromString(DataConfigBusiness), sel_registerName("sharedInstance"));
     [service dataConfigWithContainer:cell data:@{@"name":@"Smith",
                                                  @"sex":@"0",
                                                  @"headUrl":@"http://img.sootuu.com/vector/200801/070/0151.jpg"}];
@@ -221,6 +228,15 @@
     collectionViewFlowLayout.sectionInset = UIEdgeInsetsZero;
     
     self.collectionView.collectionViewLayout = collectionViewFlowLayout;
+    
+    @weakify(self);
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        @strongify(self);
+        
+        //链式编程
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsZero);
+    }];
 }
 
 #pragma mark - getters and setters 构造器
@@ -230,6 +246,7 @@
     if (_tableView == nil) {
         
         //若连接storyboard时，无需初始化
+//        _tableView = [[UITableView alloc] init];
         
         _tableView.delegate = self;
         _tableView.dataSource = self;
