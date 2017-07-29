@@ -10,6 +10,6 @@
 
 @interface NSURLRequest (YYNetwork)
 
-@property (nonatomic, copy) NSDictionary *requestParamsForYY;//请求参数
+@property (nonatomic, strong) NSDictionary *requestParamsForYY;//请求参数
 
 @end

@@ -15,7 +15,7 @@ static void *requestParamsForYYStatic;
 
 - (void)setRequestParamsForYY:(NSDictionary *)requestParamsForYY {
     
-    objc_setAssociatedObject(self, &requestParamsForYYStatic, requestParamsForYY, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &requestParamsForYYStatic, requestParamsForYY, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSDictionary *)requestParamsForYY {

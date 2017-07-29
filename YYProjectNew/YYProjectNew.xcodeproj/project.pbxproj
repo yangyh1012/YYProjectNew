@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00A323E1F2CBBDB00E1B58F /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00A323D1F2CBBDB00E1B58F /* RuntimeTestViewController.m */; };
 		A04463B31F2741D600027423 /* YYAnalyticsBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463AC1F2741D600027423 /* YYAnalyticsBusiness.m */; };
 		A04463B41F2741D600027423 /* YYBussinessConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463AE1F2741D600027423 /* YYBussinessConstants.m */; };
 		A04463B51F2741D600027423 /* YYDataConfigBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463B01F2741D600027423 /* YYDataConfigBusiness.m */; };
@@ -85,6 +86,8 @@
 		43A699B2CB370013AA529E7B /* Pods-YYProjectNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectNew/Pods-YYProjectNew.release.xcconfig"; sourceTree = "<group>"; };
 		831CC53A1E15B5278CDC538E /* Pods-YYProjectNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectNew/Pods-YYProjectNew.debug.xcconfig"; sourceTree = "<group>"; };
 		9CAD7B230DA1D39D414ED366 /* Pods_YYProjectNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYProjectNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00A323C1F2CBBDB00E1B58F /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
+		A00A323D1F2CBBDB00E1B58F /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
 		A04463AB1F2741D600027423 /* YYAnalyticsBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnalyticsBusiness.h; sourceTree = "<group>"; };
 		A04463AC1F2741D600027423 /* YYAnalyticsBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAnalyticsBusiness.m; sourceTree = "<group>"; };
 		A04463AD1F2741D600027423 /* YYBussinessConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYBussinessConstants.h; sourceTree = "<group>"; };
@@ -238,6 +241,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A00A323B1F2CBBBF00E1B58F /* RuntimeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A00A323C1F2CBBDB00E1B58F /* RuntimeTestViewController.h */,
+				A00A323D1F2CBBDB00E1B58F /* RuntimeTestViewController.m */,
+			);
+			path = RuntimeDemo;
+			sourceTree = "<group>";
+		};
 		A04463AA1F2741D600027423 /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +271,7 @@
 				A04463BF1F2742F500027423 /* ReuseCode */,
 				A04463B81F2742F500027423 /* NetDemo */,
 				A044643F1F298A7900027423 /* EncryptDemo */,
+				A00A323B1F2CBBBF00E1B58F /* RuntimeDemo */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -721,6 +734,7 @@
 				A0BA62E71F2AE8360038940C /* NSString+YYAES256.m in Sources */,
 				A04463F01F2744F800027423 /* NSArray+YYNetwork.m in Sources */,
 				A04463F21F2744F800027423 /* NSObject+YYNetwork.m in Sources */,
+				A00A323E1F2CBBDB00E1B58F /* RuntimeTestViewController.m in Sources */,
 				A04463F31F2744F800027423 /* NSString+YYNetwork.m in Sources */,
 				A04464141F2745B100027423 /* YYRSA.m in Sources */,
 				A0D513C81F1CB5A300B1BB56 /* AppDelegate.m in Sources */,
