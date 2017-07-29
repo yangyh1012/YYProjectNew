@@ -143,7 +143,9 @@
     DLog(@"row:%@",@(row));
     DLog(@"section:%@",@(section));
     
+//    id<YYDataConfigProtocol> service = [YYDataConfigBusiness sharedInstance];
     id<YYDataConfigProtocol> service = objc_msgSend(NSClassFromString(DataConfigBusiness), sel_registerName("sharedInstance"));
+//    id<YYDataConfigProtocol> service = objc_msgSend(objc_getClass("YYDataConfigBusiness"), sel_registerName("sharedInstance"));
     [service dataConfigWithContainer:cell data:@{@"name":@"Smith",
                                                  @"sex":@"0",
                                                  @"headUrl":@"http://img.sootuu.com/vector/200801/070/0151.jpg"}];
