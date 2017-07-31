@@ -6,13 +6,13 @@
 //  Copyright © 2017年 yangyh. All rights reserved.
 //
 
-#import "RuntimeTestViewController.h"
+#import "YYRuntimeTestViewController.h"
 
-@interface RuntimeTestViewController ()
+@interface YYRuntimeTestViewController ()
 
 @end
 
-@implementation RuntimeTestViewController
+@implementation YYRuntimeTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

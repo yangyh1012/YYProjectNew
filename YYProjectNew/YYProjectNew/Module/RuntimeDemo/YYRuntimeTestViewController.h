@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RuntimeTestViewController : UIViewController
+@interface YYRuntimeTestViewController : UIViewController
 
 @end

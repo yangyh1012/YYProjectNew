@@ -7,6 +7,8 @@
 //
 
 #import "YYViewController.h"
+#import "YYControllerConvert.h"
+#import "YYProjectNew-Swift.h"
 
 @interface YYViewController ()
 
@@ -50,10 +52,8 @@
     [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
        
         @strongify(self);
-        id requestController = [[NSClassFromString(@"RuntimeTestViewController") alloc] init];
-//        id requestController = [[NSClassFromString(@"YYReuseCodeViewController") alloc] init];
-//        id requestController = [[NSClassFromString(@"YYRequestTestViewController") alloc] init];
-//        id requestController = [[NSClassFromString(@"YYEncryptTestViewController") alloc] init];
+        YYControllerConvert *controller = [[YYControllerConvert alloc] init];
+        id requestController = [controller controllerConvertWithType:YYProjectNew_FirstViewController];
         [self.navigationController pushViewController:requestController animated:YES];
     }];
 }
