@@ -56,6 +56,7 @@
 		A0A3DAFF1F3032A600E1459B /* YYDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A3DAFE1F3032A600E1459B /* YYDetailViewController.m */; };
 		A0A3DB021F3032BB00E1459B /* Target_Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A3DB011F3032BB00E1459B /* Target_Detail.m */; };
 		A0A3DB091F30351300E1459B /* YYComponentCenter+YYMethodDefinedForDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A3DB081F30351300E1459B /* YYComponentCenter+YYMethodDefinedForDetail.m */; };
+		A0A3DB0C1F30C25500E1459B /* UIImage+YYChangePictureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A3DB0B1F30C25500E1459B /* UIImage+YYChangePictureColor.m */; };
 		A0BA62E41F2ADDEF0038940C /* NSString+YYSHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E31F2ADDEF0038940C /* NSString+YYSHA256.m */; };
 		A0BA62E71F2AE8360038940C /* NSString+YYAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E61F2AE8360038940C /* NSString+YYAES256.m */; };
 		A0BA62EA1F2AF02C0038940C /* YYEncryptTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA62E91F2AF02C0038940C /* YYEncryptTestViewController.m */; };
@@ -193,6 +194,8 @@
 		A0A3DB011F3032BB00E1459B /* Target_Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Detail.m; sourceTree = "<group>"; };
 		A0A3DB071F30351300E1459B /* YYComponentCenter+YYMethodDefinedForDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YYComponentCenter+YYMethodDefinedForDetail.h"; sourceTree = "<group>"; };
 		A0A3DB081F30351300E1459B /* YYComponentCenter+YYMethodDefinedForDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YYComponentCenter+YYMethodDefinedForDetail.m"; sourceTree = "<group>"; };
+		A0A3DB0A1F30C25500E1459B /* UIImage+YYChangePictureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YYChangePictureColor.h"; sourceTree = "<group>"; };
+		A0A3DB0B1F30C25500E1459B /* UIImage+YYChangePictureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YYChangePictureColor.m"; sourceTree = "<group>"; };
 		A0BA62E21F2ADDEF0038940C /* NSString+YYSHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYSHA256.h"; sourceTree = "<group>"; };
 		A0BA62E31F2ADDEF0038940C /* NSString+YYSHA256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYSHA256.m"; sourceTree = "<group>"; };
 		A0BA62E51F2AE8360038940C /* NSString+YYAES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAES256.h"; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 		A044642A1F274B3B00027423 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A0A3DB0A1F30C25500E1459B /* UIImage+YYChangePictureColor.h */,
+				A0A3DB0B1F30C25500E1459B /* UIImage+YYChangePictureColor.m */,
 				A044642D1F274B3B00027423 /* UIButton+YYAddProperty.h */,
 				A044642E1F274B3B00027423 /* UIButton+YYAddProperty.m */,
 				A044642B1F274B3B00027423 /* AppDelegate+YYLoadSomething.h */,
@@ -833,6 +838,7 @@
 				A04464301F274B3B00027423 /* NSString+YYDevice.m in Sources */,
 				A04463F61F2744F800027423 /* YYNetConfig.m in Sources */,
 				A04463CD1F2742F500027423 /* YYTableViewCell.m in Sources */,
+				A0A3DB0C1F30C25500E1459B /* UIImage+YYChangePictureColor.m in Sources */,
 				A08E59DC1F2F814600163EE8 /* FirstViewController.swift in Sources */,
 				A04463CB1F2742F500027423 /* YYCollectionViewCell.m in Sources */,
 				A04464121F2745B100027423 /* NSString+YYMD5.m in Sources */,
