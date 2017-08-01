@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "YYNetwork.h"
 #import "YYRequestConst.h"
+#import "YYComponentCenter.h"
 
 @interface AppDelegate ()<YYServiceFactoryDataSource>
 
@@ -65,7 +66,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    
+    return [[[YYComponentCenter sharedInstance] openRemoteUrl:url completion:NULL] boolValue];
+}
 
 
 

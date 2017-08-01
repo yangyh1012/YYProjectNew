@@ -10,17 +10,17 @@
 
 @implementation YYTimeHandle
 
-static YYTimeHandle *sharedManager = nil;
-
 //单例设计
 + (instancetype)sharedManager {
     
+    static YYTimeHandle *sharedManager = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         
         //函数式编程
         sharedManager = [[self alloc] init];
     });
+    
     return sharedManager;
 }
 

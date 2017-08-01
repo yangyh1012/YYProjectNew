@@ -7,8 +7,10 @@
 //
 
 #import "YYViewController.h"
-#import "YYControllerConvert.h"
 #import "YYProjectNew-Swift.h"
+#import "YYControllerConvert.h"
+#import "YYComponentCenter.h"
+#import "YYComponentCenter+YYMethodDefinedForDetail.h"
 
 @interface YYViewController ()
 
@@ -52,8 +54,11 @@
     [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
        
         @strongify(self);
-        YYControllerConvert *controller = [[YYControllerConvert alloc] init];
-        id requestController = [controller controllerConvertWithType:YYProjectNew_FirstViewController];
+//        YYControllerConvert *controller = [[YYControllerConvert alloc] init];
+//        id requestController = [controller controllerConvertWithType:YYProjectNew_FirstViewController];
+//        [self.navigationController pushViewController:requestController animated:YES];
+        
+        id requestController = [[YYComponentCenter sharedInstance] YYComponentCenter_viewControllerForDetail];
         [self.navigationController pushViewController:requestController animated:YES];
     }];
 }
