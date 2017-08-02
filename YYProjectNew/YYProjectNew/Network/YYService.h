@@ -102,11 +102,4 @@
 
 @property (nonatomic, weak, readonly) id<YYServiceProtocol> child;//子类
 
-/**
- 线上线下开关，默认调用YYNetConfig
-
- @return YES 线上
- */
-- (BOOL)isOnlineByParent;
-
 @end

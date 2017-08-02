@@ -32,13 +32,39 @@
     
 #ifdef DEBUG
     
+    BOOL isOnline = NO;
+    BOOL invoFlag = NO;
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    SEL selector = @selector(isOnlineByParent);
+    if ([service respondsToSelector:selector]) {
+        
+        invoFlag = YES;
+    } else {
+        
+        selector = @selector(isOnlineByChild);
+        if ([service respondsToSelector:selector]) {
+            
+            invoFlag = YES;
+        }
+    }
+    
+    if (invoFlag) {
+        
+        NSMethodSignature *methodSignature = [service methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+        invocation.target = service;
+        invocation.selector = selector;
+        [invocation invoke];
+        [invocation getReturnValue:&isOnline];
+    }
+    
     NSMutableString *logString = [NSMutableString stringWithString:@"\n\n**************************************************************\n*                       Request Start                        *\n**************************************************************\n\n"];
     
     [logString appendFormat:@"API Name:\t\t%@\n", [requestName network_defaultValue:@"N/A"]];
     [logString appendFormat:@"Method:\t\t\t%@\n", [methodName network_defaultValue:@"N/A"]];
     [logString appendFormat:@"Version:\t\t%@\n", [service.requestVersion network_defaultValue:@"N/A"]];
     [logString appendFormat:@"Service:\t\t%@\n", [service class]];
-    [logString appendFormat:@"Status:\t\t\t%@\n", [service isOnlineByParent] ? @"online":@"offline"];
+    [logString appendFormat:@"Status:\t\t\t%@\n", isOnline ? @"online":@"offline"];
     [logString appendFormat:@"Public Key:\t\t%@\n", [service.publicKey network_defaultValue:@"N/A"]];
     [logString appendFormat:@"Private Key:\t%@\n", [service.privateKey network_defaultValue:@"N/A"]];
     [logString appendFormat:@"Params:\n%@", requestParams];
