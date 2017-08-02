@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A003FDFA1F31E72C001CFD28 /* NSObject+YYTimeCount.m in Sources */ = {isa = PBXBuildFile; fileRef = A003FDF91F31E72C001CFD28 /* NSObject+YYTimeCount.m */; };
 		A00A323E1F2CBBDB00E1B58F /* YYRuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00A323D1F2CBBDB00E1B58F /* YYRuntimeTestViewController.m */; };
 		A04463B31F2741D600027423 /* YYAnalyticsBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463AC1F2741D600027423 /* YYAnalyticsBusiness.m */; };
 		A04463B41F2741D600027423 /* YYBussinessConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A04463AE1F2741D600027423 /* YYBussinessConstants.m */; };
@@ -95,6 +96,8 @@
 		43A699B2CB370013AA529E7B /* Pods-YYProjectNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectNew/Pods-YYProjectNew.release.xcconfig"; sourceTree = "<group>"; };
 		831CC53A1E15B5278CDC538E /* Pods-YYProjectNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYProjectNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYProjectNew/Pods-YYProjectNew.debug.xcconfig"; sourceTree = "<group>"; };
 		9CAD7B230DA1D39D414ED366 /* Pods_YYProjectNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYProjectNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A003FDF81F31E72C001CFD28 /* NSObject+YYTimeCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYTimeCount.h"; sourceTree = "<group>"; };
+		A003FDF91F31E72C001CFD28 /* NSObject+YYTimeCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYTimeCount.m"; sourceTree = "<group>"; };
 		A00A323C1F2CBBDB00E1B58F /* YYRuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRuntimeTestViewController.h; sourceTree = "<group>"; };
 		A00A323D1F2CBBDB00E1B58F /* YYRuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRuntimeTestViewController.m; sourceTree = "<group>"; };
 		A04463AB1F2741D600027423 /* YYAnalyticsBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnalyticsBusiness.h; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 		A04464231F274B3B00027423 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A003FDF81F31E72C001CFD28 /* NSObject+YYTimeCount.h */,
+				A003FDF91F31E72C001CFD28 /* NSObject+YYTimeCount.m */,
 				A04464281F274B3B00027423 /* NSString+YYEmpty.h */,
 				A04464291F274B3B00027423 /* NSString+YYEmpty.m */,
 				A04464261F274B3B00027423 /* NSString+YYDevice.h */,
@@ -843,6 +848,7 @@
 				A04463CB1F2742F500027423 /* YYCollectionViewCell.m in Sources */,
 				A04464121F2745B100027423 /* NSString+YYMD5.m in Sources */,
 				A04463F11F2744F800027423 /* NSDictionary+YYNetwork.m in Sources */,
+				A003FDFA1F31E72C001CFD28 /* NSObject+YYTimeCount.m in Sources */,
 				A0A3DAFF1F3032A600E1459B /* YYDetailViewController.m in Sources */,
 				A044641D1F2749F900027423 /* NSString+YYRandomString.m in Sources */,
 				A04463FA1F2744F800027423 /* YYRequestLogger.m in Sources */,
