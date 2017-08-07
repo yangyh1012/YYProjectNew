@@ -9,7 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "YYDataConfigProtocol.h"
 
+@protocol YYReuseCodeViewControllerTestDelegate <NSObject>
+
+@required
+
+- (void)testDelegateHandle:(id)object;
+
+@optional
+
+@end
+
+typedef NS_ENUM(NSInteger, YYReuseCodeViewControllerTestType) {
+    
+    YYReuseCodeViewControllerTestTypeFirst = 0,
+    YYReuseCodeViewControllerTestTypeSecond,
+};
+
 @interface YYReuseCodeViewController : UIViewController
+
+@property (nonatomic, weak) id <YYReuseCodeViewControllerTestDelegate> testDelegate;
+
+@property (nonatomic, assign) YYReuseCodeViewControllerTestType baseViewControllerTestType;
 
 @end
 
