@@ -31,7 +31,15 @@
         
         if (!shouldSignature) {
             
-            obj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,  (CFStringRef)obj,  NULL,  (CFStringRef)@"!*'();:@&;=+$,/?%#[]",  kCFStringEncodingUTF8));
+            NSString *preContent = @"!*'();:@&;=+$,/?%#[]";
+            
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+            
+            NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:preContent] invertedSet];
+            obj = [obj stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+#else
+            obj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,  (CFStringRef)obj,  NULL,  (CFStringRef)preContent,  kCFStringEncodingUTF8));
+#endif
         }
         
         if ([obj length] > 0) {

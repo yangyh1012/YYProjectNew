@@ -103,7 +103,13 @@
 
 - (void)eventResponsHandle {
  
-    
+//    @weakify(self);
+//    [[<#(class)#> rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        
+//        @strongify(self);
+//        
+//        <#(sentence)#>
+//    }];
 }
 
 #pragma mark - UITableViewDataSource

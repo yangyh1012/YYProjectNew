@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, YYReuseCodeViewControllerTestType) {
 #pragma mark - database 数据库处理
 #pragma mark - public method 公共方法
 #pragma mark - private method 业务无关的尽量弄成category，方便别人调用
+#pragma mark - test 存放测试信息
 #pragma mark - view layout 子视图的布局
 #pragma mark - getters and setters 构造器
 
