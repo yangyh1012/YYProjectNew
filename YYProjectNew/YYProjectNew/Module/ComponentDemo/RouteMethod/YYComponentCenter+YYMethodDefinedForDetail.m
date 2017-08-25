@@ -16,10 +16,10 @@ NSString * const DetailViewControllerNativFetch = @"DetailViewControllerNativeFe
 
 - (UIViewController *)YYComponentCenter_viewControllerForDetail {
     
-    UIViewController *viewController = [self openLocalWithTarget:TargetDetail
+    UIViewController *viewController = [self openLocalWithModule:TargetDetail
                                                           action:DetailViewControllerNativFetch
                                                           params:@{@"key":@"value"}
-                                               shouldCacheTarget:NO];
+                                               shouldCacheModule:NO];
     
     if ([viewController isKindOfClass:[UIViewController class]]) {
         

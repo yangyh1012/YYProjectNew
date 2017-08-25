@@ -14,10 +14,10 @@
 
 
 /**
- 远程调用组件，例子：aaa://targetA/actionB?id=1234
+ 远程调用组件，例子：aaa://moduleA/actionB?id=1234
  写在AppDelegate中
  
- @param url scheme://[target]/[action]?[params]
+ @param url scheme://[module]/[action]?[params]
  @param completion 完成时处理
  @return 结果
  */
@@ -25,23 +25,23 @@
 
 /**
  本地调用组件
-
- @param targetName 目标
+ 
+ @param moduleName 目标
  @param actionName 动作
  @param params 参数
- @param shouldCacheTarget 是否缓存
+ @param shouldCacheModule 是否缓存
  @return 结果
  */
-- (id)openLocalWithTarget:(NSString *)targetName
+- (id)openLocalWithModule:(NSString *)moduleName
                    action:(NSString *)actionName
                    params:(NSDictionary *)params
-        shouldCacheTarget:(BOOL)shouldCacheTarget;
+        shouldCacheModule:(BOOL)shouldCacheModule;
 
 /**
  组件缓存
-
- @param targetName 目标名
+ 
+ @param moduleName 模块名
  */
-- (void)releaseCachedTargetWithTargetName:(NSString *)targetName;
+- (void)releaseCachedModuleWithModuleName:(NSString *)moduleName;
 
 @end

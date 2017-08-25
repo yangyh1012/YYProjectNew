@@ -10,13 +10,15 @@
 #import <objc/runtime.h>
 
 NSString *const YYComponentCenter_Native = @"native";
-NSString *const YYComponentCenter_Target = @"Target_";
+NSString *const YYComponentCenter_Module = @"Module_";
 NSString *const YYComponentCenter_Action = @"Action_";
 NSString *const YYComponentCenter_Notfount = @"notFound:";
 
 @interface YYComponentCenter ()
 
-@property (nonatomic, strong) NSMutableDictionary *cachedTargets;
+@property (nonatomic, strong) NSMutableDictionary *cachedModules;//缓存模块
+
+@property (nonatomic, strong) NSMutableDictionary *cachedControllers;//缓存控制器
 
 @end
 
@@ -55,8 +57,8 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         return @(NO);
     }
     
-    //取对应的target名字和method名字
-    id result = [self openLocalWithTarget:url.host action:actionName params:params shouldCacheTarget:NO];
+    //取对应的module名字和method名字
+    id result = [self openLocalWithModule:url.host action:actionName params:params shouldCacheModule:NO];
     
     //完成时处理
     if (completion) {
@@ -73,58 +75,89 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
     return result;
 }
 
-- (id)openLocalWithTarget:(NSString *)targetName
+- (id)openLocalWithModule:(NSString *)moduleName
                    action:(NSString *)actionName
                    params:(NSDictionary *)params
-        shouldCacheTarget:(BOOL)shouldCacheTarget {
+        shouldCacheModule:(BOOL)shouldCacheModule {
     
-    NSString *targetClassString = [NSString stringWithFormat:@"%@%@", YYComponentCenter_Target, targetName];
+    NSString *moduleClassString = [NSString stringWithFormat:@"%@%@", YYComponentCenter_Module, moduleName];
     NSString *actionString = [NSString stringWithFormat:@"%@%@:", YYComponentCenter_Action, actionName];
-    Class targetClass;
     
-    NSObject *target = self.cachedTargets[targetClassString];
-    if (target == nil) {
+    if (shouldCacheModule) {
         
-        targetClass = NSClassFromString(targetClassString);
-        target = [[targetClass alloc] init];
+        id object = self.cachedControllers[moduleClassString];
+        if (object) {
+            
+            return object;
+        }
     }
     
-    //给一个固定的target专门用于在这个时候顶上，然后处理这种请求
-    if (target == nil) {
+    Class moduleClass;
+    
+    NSObject *module = self.cachedModules[moduleClassString];
+    if (module == nil) {
+        
+        moduleClass = NSClassFromString(moduleClassString);
+        module = [[moduleClass alloc] init];
+    }
+    
+    //给一个固定的module专门用于在这个时候顶上，然后处理这种请求
+    if (module == nil) {
         
         return nil;
     }
     
-    if (shouldCacheTarget) {
+    if (shouldCacheModule) {
         
-        self.cachedTargets[targetClassString] = target;
+        self.cachedModules[moduleClassString] = module;
     }
     
     SEL action = NSSelectorFromString(actionString);
     
-    if ([target respondsToSelector:action]) {
+    if ([module respondsToSelector:action]) {
         
-        return [self safePerformAction:action target:target params:params];
+        id object = [self safePerformAction:action module:module params:params];
+        
+        if (shouldCacheModule) {
+            
+            self.cachedControllers[moduleClassString] = object;
+        }
+        
+        return object;
     } else {
         
-        //有可能target是Swift对象
+        //有可能module是Swift对象
         actionString = [NSString stringWithFormat:@"%@%@WithParams:", YYComponentCenter_Action, actionName];
         action = NSSelectorFromString(actionString);
         
-        if ([target respondsToSelector:action]) {
+        if ([module respondsToSelector:action]) {
             
-            return [self safePerformAction:action target:target params:params];
+            id object = [self safePerformAction:action module:module params:params];
+            
+            if (shouldCacheModule) {
+                
+                self.cachedControllers[moduleClassString] = object;
+            }
+            
+            return object;
         } else {
             
-            //这里是处理无响应请求的地方，如果无响应，则尝试调用对应target的notFound方法统一处理
+            //这里是处理无响应请求的地方，如果无响应，则尝试调用对应module的notFound方法统一处理
             SEL action = NSSelectorFromString(YYComponentCenter_Notfount);
-            if ([target respondsToSelector:action]) {
+            if ([module respondsToSelector:action]) {
                 
-                return [self safePerformAction:action target:target params:params];
+                id object = [self safePerformAction:action module:module params:params];
+                
+                if (shouldCacheModule) {
+                    
+                    self.cachedControllers[moduleClassString] = object;
+                }
+                
+                return object;
             } else {
                 
-                //这里也是处理无响应请求的地方，在notFound都没有的时候，可以用前面提到的固定的target顶上的。
-                [self.cachedTargets removeObjectForKey:targetClassString];
+                //这里也是处理无响应请求的地方，在notFound都没有的时候，可以用前面提到的固定的module顶上的。
+                [self.cachedModules removeObjectForKey:moduleClassString];
                 
                 return nil;
             }
@@ -132,17 +165,18 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
     }
 }
 
-- (void)releaseCachedTargetWithTargetName:(NSString *)targetName {
+- (void)releaseCachedModuleWithModuleName:(NSString *)moduleName {
     
-    NSString *targetClassString = [NSString stringWithFormat:@"%@%@", YYComponentCenter_Target, targetName];
-    [self.cachedTargets removeObjectForKey:targetClassString];
+    NSString *moduleClassString = [NSString stringWithFormat:@"%@%@", YYComponentCenter_Module, moduleName];
+    [self.cachedModules removeObjectForKey:moduleClassString];
+    [self.cachedControllers removeObjectForKey:moduleClassString];
 }
 
 #pragma mark - private methods
 
-- (id)safePerformAction:(SEL)action target:(NSObject *)target params:(NSDictionary *)params {
+- (id)safePerformAction:(SEL)action module:(NSObject *)module params:(NSDictionary *)params {
     
-    NSMethodSignature* methodSig = [target methodSignatureForSelector:action];
+    NSMethodSignature* methodSig = [module methodSignatureForSelector:action];
     if(methodSig == nil) {
         
         return nil;
@@ -155,7 +189,7 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setArgument:&params atIndex:2];
         [invocation setSelector:action];
-        [invocation setTarget:target];
+        [invocation setTarget:module];
         [invocation invoke];
         
         return nil;
@@ -166,7 +200,7 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setArgument:&params atIndex:2];
         [invocation setSelector:action];
-        [invocation setTarget:target];
+        [invocation setTarget:module];
         [invocation invoke];
         NSInteger result = 0;
         [invocation getReturnValue:&result];
@@ -179,7 +213,7 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setArgument:&params atIndex:2];
         [invocation setSelector:action];
-        [invocation setTarget:target];
+        [invocation setTarget:module];
         [invocation invoke];
         BOOL result = 0;
         [invocation getReturnValue:&result];
@@ -192,7 +226,7 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setArgument:&params atIndex:2];
         [invocation setSelector:action];
-        [invocation setTarget:target];
+        [invocation setTarget:module];
         [invocation invoke];
         CGFloat result = 0;
         [invocation getReturnValue:&result];
@@ -205,7 +239,7 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
         [invocation setArgument:&params atIndex:2];
         [invocation setSelector:action];
-        [invocation setTarget:target];
+        [invocation setTarget:module];
         [invocation invoke];
         NSUInteger result = 0;
         [invocation getReturnValue:&result];
@@ -215,20 +249,30 @@ NSString *const YYComponentCenter_Notfount = @"notFound:";
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    return [target performSelector:action withObject:params];
+    return [module performSelector:action withObject:params];
 #pragma clang diagnostic pop
 }
 
 #pragma mark - getters and setters
 
-- (NSMutableDictionary *)cachedTargets {
+- (NSMutableDictionary *)cachedModules {
     
-    if (_cachedTargets == nil) {
+    if (_cachedModules == nil) {
         
-        _cachedTargets = [[NSMutableDictionary alloc] init];
+        _cachedModules = [[NSMutableDictionary alloc] init];
     }
     
-    return _cachedTargets;
+    return _cachedModules;
+}
+
+- (NSMutableDictionary *)cachedControllers {
+    
+    if (_cachedControllers == nil) {
+        
+        _cachedControllers = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _cachedControllers;
 }
 
 @end
