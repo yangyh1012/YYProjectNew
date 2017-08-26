@@ -17,7 +17,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        sharedInstance = [[YYNetConfig alloc] init];
+        sharedInstance = [[self alloc] init];
         sharedInstance.cacheCountLimit = 1000;
         sharedInstance.cacheOutdateTimeSeconds = 300;
         sharedInstance.apiNetworkingTimeoutSeconds = 20.0f;
