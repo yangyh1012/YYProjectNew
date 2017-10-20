@@ -49,6 +49,9 @@
                [deviceString isEqualToString:@"Watch2,4"]) {
         
         return @"Apple Watch Series 2";
+    } else if ([deviceString hasPrefix:@"Watch3"]) {
+        
+        return @"Apple Watch Series 3";
     }
     
     //iPad
@@ -87,6 +90,18 @@
                [deviceString isEqualToString:@"iPad6,4"]) {
         
         return @"iPad Pro (9.7 inch)";
+    } else if ([deviceString isEqualToString:@"iPad6,11"] ||
+               [deviceString isEqualToString:@"iPad6,12"]) {
+        
+        return @"iPad 5";
+    } else if ([deviceString isEqualToString:@"iPad7,1"] ||
+               [deviceString isEqualToString:@"iPad7,2"]) {
+        
+        return @"iPad Pro (12.9-inch, 2nd generation)";
+    } else if ([deviceString isEqualToString:@"iPad7,3"] ||
+               [deviceString isEqualToString:@"iPad7,4"]) {
+        
+        return @"iPad Pro (10.5-inch)";
     }
     
     //iPad mini
@@ -161,6 +176,18 @@
                [deviceString isEqualToString:@"iPhone9,4"]) {
         
         return @"iPhone 7 Plus";
+    } else if ([deviceString isEqualToString:@"iPhone10,1"] ||
+               [deviceString isEqualToString:@"iPhone10,4"]) {
+        
+        return @"iPhone 8";
+    } else if ([deviceString isEqualToString:@"iPhone10,2"] ||
+               [deviceString isEqualToString:@"iPhone10,5"]) {
+        
+        return @"iPhone 8 Plus";
+    } else if ([deviceString isEqualToString:@"iPhone10,3"] ||
+               [deviceString isEqualToString:@"iPhone10,6"]) {
+        
+        return @"iPhone X";
     }
     
     //iPod touch
